@@ -1,0 +1,87 @@
+:root{
+    --col-1:#b1e782;
+    --col-2:#b2e79f;
+    --col-3:#b3e7bf;
+    --col-4:#b4e7df;
+    --col-5:#b5e7fe;
+}
+
+/*              Specific             */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow:none;
+}
+#clockContainer{
+    height:100%;
+    width:100%;
+    flex-shrink:1;
+}
+#clock{ /*Will need to fix size via js or media later*/
+    display:block;
+    background-image:url('../img/Ios_clock.svg');
+    background-repeat: no-repeat;
+    background-color:blue;
+    height:100%;
+    width:100%;
+}
+/*              Generic              */
+/* Colors */
+.bg-c1{
+    background-color:var(--col-1);
+}
+.bg-c2{
+    background-color:var(--col-2);
+}
+.bg-c3{
+    background-color:var(--col-3);
+}
+.bg-c4{
+    background-color:var(--col-4);
+}
+.bg-c5{
+    background-color:var(--col-5);
+}
+/* Sizes */
+.h-full {
+    height: 100%;
+}
+.h-half{
+    height: 50%;
+}
+.h-3rem{
+    height:3rem;
+}
+.w-full {
+    width: 100%;
+}
+.w-half{
+    width:50%;
+}
+
+/* Flex */
+.fl-col {
+    display: flex;
+    flex-direction: column;
+}
+.fl-cent{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.fl-spc-btwn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fl-gr1 {
+    flex-grow: 1;
+}
+.fl-sh1{
+    flex-shrink:0;
+}
+.ovflw-hide{
+    overflow:hidden;
+}
