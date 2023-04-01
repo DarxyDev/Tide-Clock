@@ -10,6 +10,7 @@ html,
 body {
     height: 100vh;
     width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     display:grid;
@@ -25,17 +26,44 @@ content{
     background-color: var(--col-4);
     width:calc(100% - 2rem);
     padding:1rem;
+    display:flex;
+    flex-direction: column;
 }
 
 #clockContainer{
-    height:100%;
-    width:100%;
+    min-height:3rem;
+    flex-grow:1;
 }
 #clock{
+    position:relative;
     display:block;
     margin:auto;
     background-image:url('../img/Ios_clock.svg');
     background-repeat: no-repeat;
+}
+.tide-label{
+    margin: 1rem auto;
+    opacity: .6;
+}
+hand{
+    position:absolute;
+    background-color: black;
+    width:.5rem;
+    left: calc(50% - .5rem);
+    border-radius:3px;
+    opacity:.5;
+    transform-origin:50% 100%;
+}
+#hourHand{
+    height:20%;
+    top:30%;
+}
+#minuteHand{
+    height:30%;
+    top:20%;
+    transform:rotate(.25turn);
+}
+#tideHand{
 }
 
 

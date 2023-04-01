@@ -4,11 +4,10 @@ const styleManager = (() => {
         window.addEventListener('resize', _onResize);
         _onResize();
         function _onResize(e){
-            document.offsetHeight;
             const width = parent.offsetWidth;
             const height = parent.offsetHeight;
-            let newSize;
             
+            let newSize;   
             if(height > width) newSize = width;
             else newSize = height;
 
@@ -20,12 +19,3 @@ const styleManager = (() => {
     return {setElementAspectRatio};
 })();
 export default styleManager;
-
-function _info(){
-    console.log(`Body: ${document.body.offsetWidth}, ${document.body.offsetHeight}`);
-    let c = document.getElementById('clockContainer');
-    console.log(`Container: ${c.offsetWidth}, ${c.offsetHeight}`);
-    let d = document.getElementById('clock');
-    console.log(`Clock: ${d.offsetWidth}, ${d.offsetHeight}`);
-    console.log('\n');
-}
