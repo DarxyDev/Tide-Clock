@@ -30,13 +30,14 @@ const clockManager = (() => {
     }
     function setTideHand() {
         //get current AM/PM tide times
+        let min = ((date.getHours() % 12) * 60) + date.getMinutes();
+        
         let flooding = true;
         let prevTide =  2 * 60 + 36;
         let nextTide = 10 * 60 + 40;
 
 
         let tideCycle = Math.abs(nextTide - prevTide)
-        let min = ((date.getHours() % 12) * 60) + date.getMinutes();
         min -= prevTide % tideCycle;
         let turns = (min / tideCycle) / 2;
         if(flooding) turns += .5;
