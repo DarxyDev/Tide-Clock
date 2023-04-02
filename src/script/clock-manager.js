@@ -33,7 +33,6 @@ const clockManager = (() => {
         let prevTide = tideArr[i - 1].min;
         let nextTide = tideArr[i].min;
         let flooding = tideArr[i].type === 'HIGH';
-        console.log({prevTide,nextTide,flooding,})
 
         let tideCycle = Math.abs(nextTide - prevTide)
         min -= prevTide % tideCycle;
